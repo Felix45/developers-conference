@@ -3,8 +3,9 @@ import Sessions from './Sessions';
 import SpeakerImage from './SpeakerImage';
 import SpeakerDemographics from './SpeakerDemographics';
 
-const Speaker = ({key, speaker}) => {
+const Speaker = ({key, speaker, disp}) => {
     const {id, first, last, sessions} = speaker;
+    
     return (
       <div
         key = {key}
@@ -13,7 +14,7 @@ const Speaker = ({key, speaker}) => {
           <SpeakerImage id={id} first={first} last={last} />
           <SpeakerDemographics {...speaker} />
         </div>
-        <Sessions sessions={sessions} />
+        { disp && <Sessions sessions={sessions} /> }
       </div>
     )
   }
