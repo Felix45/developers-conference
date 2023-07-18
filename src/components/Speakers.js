@@ -2,7 +2,7 @@ import React from "react";
 import SpeakersList from "./SpeakersList";
 import SpeakersToolbar from "./SpeakersToolbar";
 
-const Speakers = ({data, disp, setDisp, theme, setTheme}) => {
+const Speakers = ({disp, setDisp, theme, setTheme}) => {
   return (
     <>
       <SpeakersToolbar
@@ -11,7 +11,7 @@ const Speakers = ({data, disp, setDisp, theme, setTheme}) => {
         theme={theme}
         setTheme={setTheme} 
       />
-      <SpeakersList data={data} disp={disp} />
+      <SpeakersList disp={disp} />
     </>
   );
 }
