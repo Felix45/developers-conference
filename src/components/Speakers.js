@@ -2,14 +2,12 @@ import React from "react";
 import SpeakersList from "./SpeakersList";
 import SpeakersToolbar from "./SpeakersToolbar";
 
-const Speakers = ({disp, setDisp, theme, setTheme}) => {
+const Speakers = ({disp, setDisp}) => {
   return (
     <>
       <SpeakersToolbar
         disp={disp}
         setDisp={setDisp}
-        theme={theme}
-        setTheme={setTheme} 
       />
       <SpeakersList disp={disp} />
     </>
