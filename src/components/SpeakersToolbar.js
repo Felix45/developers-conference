@@ -24,8 +24,8 @@ const SpeakersToolbar = ({disp, setDisp, theme, setTheme}) => {
               <label>
                 <select
                   className="form-control theme" value={theme} onChange={(event) => { setTheme(event.target.value) }}>
-                    <option value="light">Light</option>
-                    <option value="dark">Dark</option>
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
                 </select>
               </label>
             </li>
