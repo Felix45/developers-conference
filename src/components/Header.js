@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./App";
+import { ThemeContext } from "./Layout";
 
 const Header = () => {
 
   const { theme } = useContext(ThemeContext);
-  
+
   return (
     <div className="padT4 padB4">
       <div className="container mobile-container">
