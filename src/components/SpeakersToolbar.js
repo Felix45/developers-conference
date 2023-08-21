@@ -52,7 +52,7 @@ const SpeakersToolbar = () => {
                 </div>  
               </div>
             </li>
-            <li className="d-flex flex-column flex-md-row">
+            <li className="d-flex flex-column flex-md-row align-items-center">
               <strong>Year</strong>
               <label className="dropmenu">
                 <select className="form-control" value={eventYear} 
