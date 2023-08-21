@@ -1,16 +1,15 @@
 import React from "react";
 import SpeakersList from "./SpeakersList";
 import SpeakersToolbar from "./SpeakersToolbar";
+import SpeakerFilterProvider from "../context/SpeakerFilterContext";
 
-const Speakers = ({disp, setDisp}) => {
+const Speakers = () => {
+
   return (
-    <>
-      <SpeakersToolbar
-        disp={disp}
-        setDisp={setDisp}
-      />
-      <SpeakersList disp={disp} />
-    </>
+    <SpeakerFilterProvider startingShowSessions={false}>
+      <SpeakersToolbar />
+      <SpeakersList />
+    </SpeakerFilterProvider>
   );
 }
 

@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Speaker from "./Speaker";
 import { v4 as uuidv4 } from 'uuid';
 import { data } from '../../SpeakerData';
 import ReactPlaceholder from "react-placeholder";
 import useRequestDelay, { REQUEST_STATUS } from "../hooks/useRequestDelay";
+import { SpeakerFilterContext } from "../context/SpeakerFilterContext";
 
-const SpeakersList = ({disp}) => {
+const SpeakersList = () => {
   const {
     data: speakerData, requestStatus, error, updateRecord
   } = useRequestDelay(2000, data);
@@ -23,7 +24,7 @@ const SpeakersList = ({disp}) => {
     <div className="container speakers-list">
      <div className='row'>
       {
-        speakerData.map((speaker) => <Speaker key={uuidv4()} speaker={speaker} disp={disp}
+        speakerData.map((speaker) => <Speaker key={uuidv4()} speaker={speaker}
           onFavoriteToggle={(doneCallback) => { 
             updateRecord({...speaker, favorite: !speaker.favorite}, doneCallback);
         }} />)

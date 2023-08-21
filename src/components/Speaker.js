@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sessions from './Sessions';
 import SpeakerImage from './SpeakerImage';
 import SpeakerDemographics from './SpeakerDemographics';
+import { SpeakerFilterContext } from "../context/SpeakerFilterContext";
 
-const Speaker = ({speaker, disp, onFavoriteToggle}) => {
+const Speaker = ({speaker, onFavoriteToggle}) => {
     const {id, first, last, sessions} = speaker;
+
+    const {showSessions: disp} = useContext(SpeakerFilterContext);
+    
 
     return (
       <div
