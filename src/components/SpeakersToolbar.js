@@ -12,6 +12,8 @@ const SpeakersToolbar = () => {
     EVENT_YEARS,
   } = useContext(SpeakerFilterContext);
 
+  console.log(searchQuery);
+
   return (
     <div className="toolbar dark-theme-header">
       <div className="container">
@@ -42,7 +44,7 @@ const SpeakersToolbar = () => {
             <li>
               <div className="input-group">
                 <input type="text" className="form-control" placeholder="Search..."
-                  onChange={(event) => { setSearchQuery(event.target.value) }} />
+                  onChange={(event) => { setSearchQuery(event.target.value) }} value={searchQuery} />
                 <div className="input-group-append">
                   <button className="btn btn-secondary" type="button">
                     <i className="fa fa-search"></i>
@@ -54,8 +56,8 @@ const SpeakersToolbar = () => {
               <strong>Year</strong>
               <label className="dropmenu">
                 <select className="form-control" value={eventYear} 
-                  onChange = {({currentTarget}) => {
-                    setEventYear(currentTarget.value)
+                  onChange = {(event) => {
+                    setEventYear(event.target.value)
                   }}>
                     {
                       EVENT_YEARS.map((year) => <option value={year} key={year}>{year}</option>)

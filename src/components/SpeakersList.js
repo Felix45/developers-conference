@@ -28,8 +28,8 @@ const SpeakersList = () => {
       {
         speakerData.filter((speaker) => {
           return (
-            speaker.first.toLowerCase().includes(searchQuery) ||
-            speaker.last.toLowerCase().includes(searchQuery)
+            speaker.first.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            speaker.last.toLowerCase().includes(searchQuery.toLowerCase())
           )
         }).filter((speaker) => {
           return speaker.sessions.find(
