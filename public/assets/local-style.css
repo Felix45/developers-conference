@@ -788,10 +788,16 @@ input:checked + .switch:before {
 }
 
 .dark .dark-theme-header {
-    background-color: #fafafa !important;
+    border: none;
+    background-color: #222 !important;
 }
 
 .dark .dark-theme-text {
+    color: white !important;
+}
+
+.dark-theme-header .toolrow li {
+    border: none;
     color: white !important;
 }
 
